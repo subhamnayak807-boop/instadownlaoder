@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Video Downloader</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <p class="kicker">InstaFetch</p>
+        <h1>Instagram Video Downloader</h1>
+        <p class="subtitle">Paste an Instagram reel/post URL and download in available resolutions.</p>
+      </section>
+
+      <form id="video-form" class="card">
+        <label for="video-url">Instagram URL</label>
+        <div class="input-row">
+          <input
+            id="video-url"
+            type="url"
+            placeholder="https://www.instagram.com/reel/..."
+            required
+          />
+          <button id="fetch-btn" type="submit">Get Formats</button>
+        </div>
+      </form>
+
+      <section id="result" class="card hidden">
+        <div id="video-meta" class="video-meta"></div>
+        <h2>Available Downloads</h2>
+        <ul id="download-list" class="download-list"></ul>
+      </section>
+
+      <p id="status" class="status"></p>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+  </html>

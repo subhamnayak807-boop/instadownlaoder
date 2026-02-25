@@ -1,0 +1,13 @@
+{
+  "name": "instagram-downloader-webapp",
+  "version": "1.0.0",
+  "description": "Web app to fetch Instagram video formats and download in multiple resolutions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

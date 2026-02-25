@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap");
+
+:root {
+  --bg-top: #fff2de;
+  --bg-bottom: #f7f9ff;
+  --surface: #ffffff;
+  --surface-soft: #fffaf1;
+  --text: #1c2430;
+  --muted: #5e6878;
+  --accent: #0f6b5a;
+  --accent-hover: #0c5a4c;
+  --secondary: #d66b1f;
+  --border: #dce3ef;
+  --shadow: 0 12px 30px rgba(17, 26, 44, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 15% 5%, #ffe7c2 0%, transparent 30%),
+    radial-gradient(circle at 90% 8%, #e6f3ff 0%, transparent 28%),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 60%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 860px;
+  margin: 40px auto;
+  padding: 0 18px 28px;
+}
+
+.hero {
+  margin-bottom: 20px;
+}
+
+.kicker {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(214, 107, 31, 0.12);
+  color: #8a4715;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-family: "Space Grotesk", "Avenir Next", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.08;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  max-width: 56ch;
+  font-size: 1.03rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow);
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
+
+.input-row {
+  display: flex;
+  gap: 12px;
+}
+
+input[type="url"] {
+  flex: 1;
+  padding: 13px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+input[type="url"]:focus {
+  border-color: #87abde;
+  box-shadow: 0 0 0 4px rgba(135, 171, 222, 0.2);
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 13px 18px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.video-meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface-soft);
+}
+
+.video-meta img {
+  width: 210px;
+  border-radius: 12px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #e6dcca;
+}
+
+.video-meta h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.video-meta p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.02rem;
+  color: #293041;
+}
+
+.download-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.download-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid #e3e9f3;
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  background: #fcfdff;
+}
+
+.download-list a {
+  color: #fff;
+  background: var(--secondary);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.86rem;
+  padding: 8px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.download-list a:hover {
+  background: #bf5712;
+}
+
+.status {
+  min-height: 1.6em;
+  margin-top: 6px;
+  color: #b42318;
+  font-size: 0.95rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 620px) {
+  .container {
+    margin-top: 26px;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  .video-meta {
+    flex-direction: column;
+  }
+
+  .video-meta img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .download-list li {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
